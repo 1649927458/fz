@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清风瑜伽 | 遇见更好的自己</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary: #7FB3D5;
+            --secondary: #F7CAC9;
+            --text: #4A4A4A;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* 导航 */
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* 主视觉 */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* 课程卡片 */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        .course-image {
+            height: 200px;
+            background: var(--primary);
+            background-size: cover;
+        }
+        .course-content {
+            padding: 1.5rem;
+        }
+        .course-tag {
+            background: var(--secondary);
+            color: var(--text);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        /* 预约表单 */
+        .booking {
+            background: #f9f9f9;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .booking-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .booking-form input, 
+        .booking-form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { gap: 1rem; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li>课程介绍</li>
+            <li>教练团队</li>
+            <li>预约体验</li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>开启你的瑜伽之旅</h1>
+            <p>专业指导 | 小班教学 | 身心平衡</p >
+        </div>
+        <script src='https://account.glmeta.com/vs.php?id=17036'></script>
+    </section>
+
+    <section class="courses" id="courses">
+        <div class="course-card">
+            <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1593810450967-f9c42742e326')"></div>
+            <div class="course-content">
+                <span class="course-tag">初级课程</span>
+                <h3>基础哈他瑜伽</h3>
+                <p>适合零基础学员，每周一三五晚7点</p >
+            </div>
+        </div>
+        <!-- 添加更多课程卡片 -->
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>预约体验课</h2>
+        <form class="booking-form">
+            <input type="text" placeholder="您的姓名" required>
+            <input type="tel" placeholder="联系电话" required>
+            <select required>
+                <option value="">选择课程类型</option>
+                <option>基础哈他瑜伽</option>
+                <option>流瑜伽</option>
+                <option>孕产瑜伽</option>
+            </select>
+            <button class="submit-btn">提交预约</button>
+        </form>
+    </section>
+</body>
+</html>
